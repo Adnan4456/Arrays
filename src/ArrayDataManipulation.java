@@ -28,7 +28,7 @@ public class ArrayDataManipulation {
                 + Arrays.toString(intArray));
 
         // setAll was introduced in Java 8
-        // It uses lambda expressions, but demonstrates sample here
+        // It uses lambda   expressions, but demonstrates sample here
         Arrays.setAll(intArray, (index) -> index + 1);
         System.out.println("Array values after setAll: "
                 + Arrays.toString(intArray));

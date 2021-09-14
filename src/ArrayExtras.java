@@ -24,6 +24,9 @@ public class ArrayExtras {
         System.out.println("myLongArray = " + Arrays.toString(myLongArray));
 
         //And you know you can do this . Java autoboxes
+        //autoBoxing . java convert primitive data type to object class;
+        //unboxing.java convert object to primitive data type.
+
         Integer aInteger = a;
         Integer bInteger = b;
         System.out.println("aInteger = " + aInteger);
