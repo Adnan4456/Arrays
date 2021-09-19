@@ -40,5 +40,29 @@ public class ArrayExtras {
         myIntegerArray[0] = aInteger;
         myIntegerArray[1] = b;
         System.out.println("myInteger Array = " + Arrays.toString(myIntegerArray));
+
+        //error
+        //Long[] newLongArray = new int[2];
+//        Integer[] newIntegerArray = new int[20];
+
+        //because arrays static methods will not accept two arrays of
+        //different type.even if their types are normally widened.
+        int[] intArray = {0,1,2,3,4};
+       // int misMatched = Arrays.mismatch(intArray , integerArray);
+//        boolean same = Arrays.equals(intArray , integerArray);
+       // int compare  =Arrays.compare(intArray, integerArray);
+
+        System.out.println("/n-------Test methods with common super class-----");
+
+        Number[] numberArray =  {0,1,2,3,4};
+        System.out.println("Arrays.misMatch(numberArray, integerArray)= "
+        +Arrays.mismatch(numberArray,integerArray));
+        System.out.println("Arrays.equals(numberArray, integerArray)= "
+        +Arrays.equals(numberArray,integerArray));
+
+        //error. because java.lang.Number class doesnot implement comparable.
+        //Therefore, it is giving error.
+//        int compare = Arrays.compare(numberArray,integerArray);
+
     }
 }

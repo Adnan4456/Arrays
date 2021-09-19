@@ -28,7 +28,9 @@ public class ArraysAndLists {
         List subList = Arrays.asList(firstString).subList(0,5);
 
         //  error. because we are getting immutable list and sort their elements .
-        //List subList = firstList.subList(0,5);
+        // List subList = firstList.subList(0,5);//It will give runtime error
+       // List mySubList = secondList.subList(0,3);//It will give runtime error
+
         System.out.println("subList = " + subList.toString());
 
         //Sort the subList
@@ -38,8 +40,9 @@ public class ArraysAndLists {
         System.out.println("firstString array = " + Arrays.toString(firstString));
         System.out.println("firstList = " + firstList.toString());
 
-        //Now look at toArray method
-        System.out.println("/n-----------toArray example-------------");
+        //Now look at toArray method.
+
+        System.out.println("\n-----------toArray example-------------");
         int arrayLength = firstList.size();//array length changes result.
        // int arrayLength = 5;
 
@@ -54,15 +57,14 @@ public class ArraysAndLists {
         String[] bArray = new String[arrayLength];
 
         //Calling toArray assigning returned array to a variable.
-        String[] nextArray = (String[]) firstList.toArray(bArray);
+        String[] nextArray =  (String[]) firstList.toArray(bArray);
 
         System.out.println("bArray array = " + Arrays.toString(bArray));
         System.out.println("nextArray = "+ Arrays.toString(nextArray));
         System.out.println("nextArray.equals(bArray) = "
                     +nextArray.equals(bArray));
 
-        //
-        System.out.println("/n---------Final toArray examples-------");
+        System.out.println("\n---------Final toArray examples-------");
         //if you always want to an array that represents the elements
         //exact in the list, you can pass a 0 length array.
 
@@ -71,7 +73,14 @@ public class ArraysAndLists {
         System.out.println("arrayRepresentation array = "+ Arrays.toString(arrayRepresentation));
 
         //You can call toArray with no parameter , it returns an array of Object.
-        Object[] objectArray = firstList.toArray();
+        Object[] objectArray =   firstList.toArray();
         System.out.println("objectArray array = " +Arrays.toString(objectArray));
+
+        //we will get runtime time error.
+        //We can not cast object to String ClassCastException will occur.
+
+//        String[] newRepresentation = (String[]) objectArray;
+//        System.out.println("newRepresentation array = "+
+//                        Arrays.toString(newRepresentation));
     }
 }
